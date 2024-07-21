@@ -4,6 +4,9 @@ from typing import List
 from database import SessionLocal, engine, Base
 from models import PersonalInfo, Saisine
 from fastapi.middleware.cors import CORSMiddleware
+
+from starlette.middleware.trustedhost import TrustedHostMiddleware
+
 from schemas import PersonalInfoCreate, PersonalInfo, SaisineCreate, Saisine
 
 
@@ -11,6 +14,9 @@ from schemas import PersonalInfoCreate, PersonalInfo, SaisineCreate, Saisine
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
+app.add_middleware(
+    TrustedHostMiddleware, allowed_hosts=["<votre-url-render>.onrender.com", "*.onrender.com"]
+)
 
 app.add_middleware(
     CORSMiddleware,
