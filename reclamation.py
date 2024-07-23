@@ -27,6 +27,7 @@ async def create_reclamation(reclamation: schemas.Reclamation, db: Session = Dep
             "resume_probleme": reclamation.saisine.resume_probleme,
             "personal_info_id": personal.id
         }
+
        
         db_saisine = models.Saisine(**saisine_data)
         db.add(db_saisine)
