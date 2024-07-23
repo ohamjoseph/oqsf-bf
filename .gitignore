@@ -2,3 +2,5 @@
 __pycache__/
 
 reclamations.db
+.idea
+.env
