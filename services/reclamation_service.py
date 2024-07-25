@@ -14,11 +14,11 @@ from schemas.reclamation_schema import ReclamationCreate
 
 class ReclamationService:
     def __init__(self,
-                 particulier_controller: ParticulierController = Depends(),
+                 particulier_service: ParticulierService = Depends(),
                  saisine_service: SaisineService = Depends(),
                  structure_controller: StructureController = Depends(),
                  ):
-        self.particulier_controller = particulier_controller
+        self.particulier_controller = particulier_service
         self.saisine_service = saisine_service
         self.structure_controller = structure_controller
 
