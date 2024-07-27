@@ -20,4 +20,4 @@ class SaisineRepository:
 
 
     def get_saisines(slef, skip: int = 0, limit: int = 10):
-        return slef.db.query(saisine_model.Saisine).offset(skip).limit(limit).all()
+        return slef.db.query(saisine_model.Saisine).offset(skip).all()
