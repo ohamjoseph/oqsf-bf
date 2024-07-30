@@ -5,7 +5,6 @@ from database import Base
 class Saisine(Base):
     __tablename__ = 'saisine'
 
-    id = Column(Integer, primary_key=True, autoincrement=True)
     institution = Column(String, nullable=False)
     agence = Column(String, nullable=False)
     motif_reclamation = Column(String, nullable=False)

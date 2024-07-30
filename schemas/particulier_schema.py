@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from pydantic import BaseModel
 from typing import List, Optional
 from schemas.saisine_schema import Saisine, SaisineCreate
@@ -24,6 +26,8 @@ class ParticulierCreate(ParticulierBase):
 
 class Particulier(ParticulierBase):
     id: int
+    createDate: datetime
+    updateDate: datetime
 
     class Config:
         orm_mode = True

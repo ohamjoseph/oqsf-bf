@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from pydantic import BaseModel
 from typing import Optional
 
@@ -21,6 +23,8 @@ class Saisine(SaisineBase):
     id: int
     particulier_id: Optional[int] = None
     structure_id: Optional[int] = None
+    createDate: datetime
+    updateDate: datetime
 
     class Config:
         orm_mode = True

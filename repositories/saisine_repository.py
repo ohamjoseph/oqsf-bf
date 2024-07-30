@@ -1,3 +1,4 @@
+from sqlalchemy import desc
 from sqlalchemy.orm import Session
 from fastapi import Depends
 from database import get_db
@@ -20,4 +21,6 @@ class SaisineRepository:
 
 
     def get_saisines(slef, skip: int = 0, limit: int = 10):
-        return slef.db.query(saisine_model.Saisine).offset(skip).all()
+        return (slef.db.query(saisine_model.Saisine)
+                .order_by(desc(saisine_model.Saisine.createDate))
+                .all())

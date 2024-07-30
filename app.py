@@ -2,7 +2,6 @@ from fastapi import FastAPI
 from database import SessionLocal, engine, Base
 from fastapi.middleware.cors import CORSMiddleware
 
-from models.structure_model import StructureInfo
 from routers import particulier_router, saisine_route, reclamation_router, structure_router
 
 # Création des tables

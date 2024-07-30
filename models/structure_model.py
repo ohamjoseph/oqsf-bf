@@ -7,7 +7,6 @@ from models.saisine_model import Saisine
 class StructureInfo(Base):
     __tablename__ = 'structure_info'
 
-    id = Column(Integer, primary_key=True, autoincrement=True)
     denomination = Column(String, nullable=False)
     forme_juridique = Column(String, nullable=False)
     numero_police = Column(String, nullable=False)

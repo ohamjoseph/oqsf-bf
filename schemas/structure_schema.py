@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from pydantic import BaseModel
 from typing import Optional
 
@@ -24,6 +26,8 @@ class StructureInfoCreate(StructureInfoBase):
 
 class StructureInfo(StructureInfoBase):
     id: int
+    createDate: datetime
+    updateDate: datetime
 
     class Config:
         orm_mode = True
