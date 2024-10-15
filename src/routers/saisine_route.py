@@ -1,7 +1,7 @@
 from typing import List
 from fastapi import APIRouter, Depends
-from controllers.saisine_controller import SaisineController
-from schemas.saisine_schema import SaisineCreate, Saisine
+from src.controllers.saisine_controller import SaisineController
+from src.schemas.saisine_schema import SaisineCreate, Saisine
 
 
 router = APIRouter()

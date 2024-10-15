@@ -1,8 +1,8 @@
 from fastapi import FastAPI
-from database import SessionLocal, engine, Base
+from database import engine, Base
 from fastapi.middleware.cors import CORSMiddleware
 
-from routers import particulier_router, saisine_route, reclamation_router, structure_router
+from src.routers import particulier_router, saisine_route, reclamation_router, structure_router
 
 # Création des tables
 Base.metadata.create_all(bind=engine)
@@ -45,4 +45,4 @@ app.include_router(
 
 @app.get("/")
 def main():
-    return "reclamation"
+    return "reclamation api v2"

@@ -2,9 +2,10 @@ from typing import List
 
 from fastapi import Depends
 
-from models.particulier_model import ParticulierInfo
-from repositories.particulier_repository import *
-from schemas.particulier_schema import Particulier
+from src.models.particulier_model import ParticulierInfo
+from src.repositories.particulier_repository import ParticulierRepository
+from src.schemas.particulier_schema import ParticulierCreate
+
 
 class ParticulierService:
     '''

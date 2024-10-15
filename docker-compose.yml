@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  fastapi:
+    build: .
+    env_file: .docker.env
+    ports:
+      - "8001:80"
+    volumes:
+      - .:/code
+    networks:
+      - my_net
+
+
+networks:
+  my_net:
+    external: true

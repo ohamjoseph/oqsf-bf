@@ -2,8 +2,8 @@ from sqlalchemy.orm import Session
 from fastapi import Depends
 from database import get_db
 
-from models import particulier_model
-from schemas.particulier_schema import ParticulierCreate
+from src.models import particulier_model
+from src.schemas.particulier_schema import ParticulierCreate
 
 
 class ParticulierRepository:

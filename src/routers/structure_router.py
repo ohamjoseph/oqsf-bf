@@ -1,10 +1,7 @@
-from typing import List
-
 from fastapi import APIRouter, Depends
 
-from controllers.structure_controller import StructureController
-from models.structure_model import StructureInfo
-from schemas.structure_schema import StructureInfoCreate
+from src.controllers.structure_controller import StructureController
+from src.schemas.structure_schema import StructureInfoCreate
 
 router = APIRouter()
 

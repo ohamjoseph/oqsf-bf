@@ -2,8 +2,8 @@ from sqlalchemy import desc
 from sqlalchemy.orm import Session
 from fastapi import Depends
 from database import get_db
-from models import saisine_model
-from schemas.saisine_schema import SaisineCreate
+from src.models import saisine_model
+from src.schemas.saisine_schema import SaisineCreate
 
 
 class SaisineRepository:

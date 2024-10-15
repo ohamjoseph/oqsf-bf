@@ -2,14 +2,13 @@ from http.client import HTTPException
 
 from fastapi import Depends
 
-from controllers.structure_controller import StructureController
-from schemas.particulier_schema import Particulier
-from schemas.saisine_schema import SaisineCreate
+from src.controllers.structure_controller import StructureController
+from src.schemas.particulier_schema import Particulier
+from src.schemas.saisine_schema import SaisineCreate
 
-from services.particulier_service import ParticulierService
-from controllers.particulier_controller import ParticulierController
-from services.saisine_service import SaisineService
-from schemas.reclamation_schema import ReclamationCreate
+from src.services.particulier_service import ParticulierService
+from src.services.saisine_service import SaisineService
+from src.schemas.reclamation_schema import ReclamationCreate
 
 
 class ReclamationService:

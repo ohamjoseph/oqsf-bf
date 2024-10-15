@@ -1,8 +1,7 @@
 from datetime import datetime
 
 from pydantic import BaseModel
-from typing import List, Optional
-from schemas.saisine_schema import Saisine, SaisineCreate
+from typing import Optional
 
 
 class ParticulierBase(BaseModel):

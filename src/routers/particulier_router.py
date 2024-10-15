@@ -1,5 +1,6 @@
 from fastapi import APIRouter
-from controllers.particulier_controller import *
+from src.controllers.particulier_controller import *
+from src.schemas.particulier_schema import Particulier
 
 router = APIRouter()
 

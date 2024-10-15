@@ -1,7 +1,7 @@
 from fastapi import Depends
 
-from repositories.structure_repository import StructureRepository
-from schemas.structure_schema import StructureInfoCreate
+from src.repositories.structure_repository import StructureRepository
+from src.schemas.structure_schema import StructureInfoCreate
 
 
 class StructureService:

@@ -1,9 +1,7 @@
-from _ctypes import Structure
-
 from fastapi import Depends, HTTPException
 
-from schemas.structure_schema import StructureInfoCreate
-from services.structure_services import StructureService
+from src.schemas.structure_schema import StructureInfoCreate
+from src.services.structure_services import StructureService
 
 
 class StructureController:
@@ -35,7 +33,7 @@ class StructureController:
         :return:
         """
         updated_structure = self._structure_service.update_structure(
-            structure_id=structure_id,
+            structure_id=int(structure_id),
             structure=structure)
 
         if updated_structure is None:
@@ -58,7 +56,5 @@ class StructureController:
 
         return delete_structure
 
-
     def get_structures(self):
         return self._structure_service.get_structures()
-

@@ -1,7 +1,7 @@
 from fastapi import Depends
 
-from schemas.reclamation_schema import Reclamation, ReclamationCreate
-from services.reclamation_service import ReclamationService
+from src.schemas.reclamation_schema import ReclamationCreate
+from src.services.reclamation_service import ReclamationService
 
 
 class ReclamationController:

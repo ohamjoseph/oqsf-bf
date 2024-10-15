@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends
 
-from controllers.reclamation_controller import ReclamationController
-from schemas.reclamation_schema import Reclamation, ReclamationCreate
+from src.controllers.reclamation_controller import ReclamationController
+from src.schemas.reclamation_schema import ReclamationCreate
 
 router = APIRouter()
 

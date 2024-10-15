@@ -3,8 +3,8 @@ from http.client import HTTPException
 from sqlalchemy.orm import Session
 from fastapi import Depends
 from database import get_db
-from models import structure_model
-from schemas import structure_schema
+from src.models import structure_model
+from src.schemas import structure_schema
 
 
 class StructureRepository:
@@ -44,8 +44,8 @@ class StructureRepository:
             structure_model.StructureInfo.id == structure_id).first()
 
     def update_structure(self,
-                           structure_id: int,
-                           structure: structure_schema.StructureInfoCreate):
+                         structure_id: int,
+                         structure: structure_schema.StructureInfoCreate):
         """
         Permet de modifier un structure.
         :param structure_id: int

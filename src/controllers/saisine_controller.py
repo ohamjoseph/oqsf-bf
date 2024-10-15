@@ -1,7 +1,7 @@
 from fastapi import Depends
-from models import saisine_model
-from schemas.saisine_schema import SaisineCreate
-from services.saisine_service import SaisineService
+from src.models import saisine_model
+from src.schemas.saisine_schema import SaisineCreate
+from src.services.saisine_service import SaisineService
 
 
 class SaisineController:

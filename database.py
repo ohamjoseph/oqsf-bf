@@ -51,7 +51,13 @@ import os
 # Charger les variables d'environnement depuis le fichier .env
 load_dotenv()
 
-DATABASE_URL = os.getenv("DATABASE_URL")
+#DATABASE_URL = os.getenv("DATABASE_URL")
+DATABASE_USER = os.getenv("DATABASE_USER")
+DATABASE_PASSWORD = os.getenv("DATABASE_PASSWORD")
+DATABASE_NAME = os.getenv("DATABASE_NAME")
+DATABASE_LINK = os.getenv("DATABASE_LINK")
+DATABASE_PORT = os.getenv("DATABASE_PORT")
+DATABASE_URL = f'postgresql://{DATABASE_USER}:{DATABASE_PASSWORD}@{DATABASE_LINK}:{DATABASE_PORT}/{DATABASE_NAME}'
 
 # Créer l'engine avec psycopg2-binary
 engine = create_engine(DATABASE_URL, echo=True)

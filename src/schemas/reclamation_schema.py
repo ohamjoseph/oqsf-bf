@@ -1,7 +1,8 @@
 from pydantic import BaseModel
 from typing import Optional
 
-from schemas import structure_schema, particulier_schema, saisine_schema
+from src.schemas import saisine_schema
+from src.schemas import particulier_schema, structure_schema
 
 
 class ReclamationBase(BaseModel):

@@ -1,10 +1,6 @@
 from http.client import HTTPException
-from typing import List
 
-from fastapi import Depends
-
-from models.particulier_model import ParticulierInfo
-from services.particulier_service import *
+from src.services.particulier_service import *
 
 class ParticulierController:
     """
